@@ -68,5 +68,11 @@ class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
         $this->byId('b')->value($b);
         $this->byId('divide')->click();
     }
+
+    public function testTitle() 
+    {
+        $this->url('/main.php');
+        $this->assertEquals('testing', $this->byId('title')->text());
+    }
 }
 ?>

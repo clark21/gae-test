@@ -52,6 +52,7 @@ if(isset($_POST['a']) && isset($_POST['b']) && isset($_POST['process'])) {
 <head>
 </head>
 <body>
+    <h4 id="title">Test</h4>
     <?php if(isset($msg)): ?>
     <p><?php echo $msg; ?></p>
     <?php endif; ?>
