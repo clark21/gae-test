@@ -1,13 +1,27 @@
 <?php
-class IndexTest extends PHPUnit_Framework_TestCase
+
+class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
 {
-    public function testSet() 
+    /**
+     * Setup
+     * @return void 
+     */
+     public function setUp()
     {
-		
-	}
-	
-	public function testGet() 
+        $this->setBrowser('phantomjs');
+        $this->setHost('127.0.0.1');
+        $this->setPort(4444);
+        $this->setBrowserUrl('http://127.0.0.1/');
+    }
+    
+    /** 
+     * Method testSelenium 
+     * @test 
+     */ 
+    public function testSelenium()
     {
-		
-	}
+        $this->url("/main.php");
+        $this->assertEquals('Hello', $this->byId('boom')->text());
+    }
 }
+?>
