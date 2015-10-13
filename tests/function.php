@@ -62,7 +62,7 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
         try {
             $math->multiply();
         } catch(\Exception $e) { 
-            $this->assertEquals('Please provide numbers to mutiply', $e->getMessage());
+            $this->assertEquals('Please provide numbers to multiply', $e->getMessage());
         }
 
         // no input
