@@ -1,32 +1,50 @@
 <?php require_once(__DIR__.'/math.php');
-
-    if(isset($_POST['a']) && isset($_POST['b']) && isset($_POST['process'])) {
-        $math = new Math;
-        $result = 0;
-        switch(strtolower($_POST['process'])) {
-            case 'add':
+$result = '0';
+if(isset($_POST['a']) && isset($_POST['b']) && isset($_POST['process'])) {
+    $math = new Math;
+    switch(strtolower($_POST['process'])) {
+        case 'add':
+            try {
                 $result = $math->setA($_POST['a'])
                     ->setB($_POST['b'])
                     ->add();
-                break;
-            case 'subtract':
+            } catch(Exception $e) {
+                $msg = $e->getMessage();
+            }
+
+            break;
+        case 'subtract':
+            try {
                 $result = $math->setA($_POST['a'])
                     ->setB($_POST['b'])
                     ->subtract();
-                break;
-            case 'multiply':
+            } catch(Exception $e) {
+                $msg = $e->getMessage();
+            }
+
+            break;
+        case 'multiply':
+            try {
                 $result = $math->setA($_POST['a'])
                     ->setB($_POST['b'])
                     ->multiply();
-                break;
-            case 'divide':
+            } catch (Exception $e) {
+                $msg = $e->getMessage();
+            }
+
+            break;
+        case 'divide':
+            try {
                 $result = $math->setA($_POST['a'])
                     ->setB($_POST['b'])
                     ->divide();
-                break;
+            } catch(Exception $e) {
+                $msg = $e->getMessage();
+            }
+            break;
 
-        }
     }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +52,9 @@
 <head>
 </head>
 <body>
+    <?php if(isset($msg)): ?>
+    <p><?php echo $msg; ?></p>
+    <?php endif; ?>
     <form method="post">
         <p><input type="text" id="a" name="a" /></p>
         <p><input type="text" id="b" name="b" /></p>
