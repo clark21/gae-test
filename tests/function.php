@@ -3,8 +3,8 @@ require_once(__DIR__.'/../math.php');
 
 class EdenCoreRouteTest extends \PHPUnit_Framework_TestCase 
 { 
-    $a = 19;
-    $b = 8;
+    protected $a = 19;
+    protected $b = 8;
     
     public function testAdd() {
         $math = new Math;

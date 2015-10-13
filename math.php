@@ -1,7 +1,7 @@
 <?php
 Class Math {
-    $a = null;
-    $b = null;
+    protected $a = null;
+    protected $b = null;
     public function setA($a) {
         if(!is_numeric($a)) {
             throw new Exception('Invalid input');
