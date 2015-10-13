@@ -1,13 +1,11 @@
 language: php
 php:
-  - 5.4
+- 5.4
 before_install:
 - openssl aes-256-cbc -K $encrypted_a9612bbdf61a_key -iv $encrypted_a9612bbdf61a_iv
-  -in My\ First\ Project-8115a0ce094a.json.enc -out My\ First\ Project-8115a0ce094a.json
-  -d
-
+  -in service-key.json.enc -out service-key.json -d
 deploy:
   provider: gae
-  keyfile: "My First Project-8115a0ce094a.json"
+  keyfile: "service-key.json" 
   default: true
-  project: "logical-iridium-107208"
+  project: logical-iridium-107208
