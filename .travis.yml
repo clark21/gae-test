@@ -1,3 +1,6 @@
+language: php
+php:
+  - 5.4
 before_install:
 - openssl aes-256-cbc -K $encrypted_a9612bbdf61a_key -iv $encrypted_a9612bbdf61a_iv
   -in My\ First\ Project-8115a0ce094a.json.enc -out My\ First\ Project-8115a0ce094a.json
