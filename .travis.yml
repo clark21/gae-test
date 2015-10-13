@@ -8,6 +8,6 @@ before_install:
 
 deploy:
   provider: gae
-  keyfile: "My\ First\ Project-8115a0ce094a.json.enc"
+  keyfile: "My\ First\ Project-8115a0ce094a.json"
   default: true
   project: "logical-iridium-107208"
