@@ -1,5 +1,4 @@
 <?php
-
 class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
 {
     /**
@@ -18,10 +17,56 @@ class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
      * Method testSelenium 
      * @test 
      */ 
-    public function testSelenium()
+    public function testAdd()
     {
-        $this->url("/main.php");
-        $this->assertEquals('Hello', $this->byId('boom')->text());
+        $this->url('/main.php');
+        $a = 100;
+        $b = 10;
+        $this->byId('a')->value($a);
+        $this->byId('b')->value($b);
+        $this->byId('add')->click();
+    }
+    
+    /** 
+     * Method testSelenium 
+     * @test 
+     */ 
+    public function testSubtract()
+    {
+        $this->url('/main.php');
+        $a = 100;
+        $b = 10;
+        $this->byId('a')->value($a);
+        $this->byId('b')->value($b);
+        $this->byId('subtract')->click();
+    }
+    
+    /** 
+     * Method testSelenium 
+     * @test 
+     */ 
+    public function testMultiply()
+    {
+        $this->url('/main.php');
+        $a = 100;
+        $b = 10;
+        $this->byId('a')->value($a);
+        $this->byId('b')->value($b);
+        $this->byId('multiply')->click();
+    }
+    
+    /** 
+     * Method testSelenium 
+     * @test 
+     */ 
+    public function testDivide()
+    {
+        $this->url('/main.php');
+        $a = 100;
+        $b = 10;
+        $this->byId('a')->value($a);
+        $this->byId('b')->value($b);
+        $this->byId('divide')->click();
     }
 }
 ?>
