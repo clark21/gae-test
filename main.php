@@ -1,7 +1,7 @@
-<?php require_once(__DIR__.'/math.php');
+<?php require_once(__DIR__.'/Math/Index.php');
 $result = '0';
 if(isset($_POST['a']) && isset($_POST['b']) && isset($_POST['process'])) {
-    $math = new Math;
+    $math = new \Math\Index;
     switch(strtolower($_POST['process'])) {
         case 'add':
             try {

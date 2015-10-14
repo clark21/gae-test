@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__.'/../math.php');
+require_once(__DIR__.'/../Math/Index.php');
 
 class FunctionTest extends \PHPUnit_Framework_TestCase 
 { 
@@ -7,7 +7,7 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
     protected $b = 8;
     
     public function testAdd() {
-        $math = new Math;
+        $math = new \Math\Index;
         $result = $math->setA($this->a)
             ->setB($this->b)
             ->add();
@@ -16,7 +16,7 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
     }
     
     public function testSubtract() {
-        $math = new Math;
+        $math = new \Math\Index;
         $result = $math->setA($this->a)
             ->setB($this->b)
             ->subtract();
@@ -25,7 +25,7 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
     }
     
     public function testMutiply() {
-        $math = new Math;
+        $math = new \Math\Index;
         $result = $math->setA($this->a)
             ->setB($this->b)
             ->multiply();
@@ -34,7 +34,7 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
     }
     
     public function testDivide() {
-        $math = new Math;
+        $math = new \Math\Index;
         $result = $math->setA($this->a)
             ->setB($this->b)
             ->divide();
@@ -43,7 +43,7 @@ class FunctionTest extends \PHPUnit_Framework_TestCase
     }
 
     public function testError() {
-        $math = new Math;
+        $math = new \Math\Index;
         // no input
         try {
             $math->add();
