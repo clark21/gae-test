@@ -19,9 +19,22 @@ namespace Math;
 
 class Index
 {
+    /*
+     * @var null|int $a
+     */
     protected $a = null;
+
+    /*
+     * @var null|int $a
+     */
     protected $b = null;
     
+    /*
+     * Set the value for $this->a
+     *
+     * @param int $a
+     * @return Math\Index
+     */
     public function setA($a)
     {
         if (!is_numeric($a)) {
@@ -30,8 +43,14 @@ class Index
 
         $this->a = $a;
         return $this;
-    }
+    } 
 
+    /*
+     * Set the value for $this->b
+     *
+     * @param int $b
+     * @return Math\Index
+     */
     public function setB($b)
     {
         if (!is_numeric($b)) {
@@ -42,6 +61,11 @@ class Index
         return $this;
     }
 
+    /*
+     * Add the two value
+     *
+     * @return int
+     */
     public function add()
     {
         if ($this->a === null || $this->b === null) {
@@ -49,8 +73,13 @@ class Index
         }
 
         return $this->a + $this->b;
-    }
-    
+    } 
+
+    /*
+     * Subtract the two value
+     *
+     * @return int
+     */
     public function subtract()
     {
         if ($this->a === null || $this->b === null) {
@@ -60,6 +89,11 @@ class Index
         return $this->a - $this->b;
     }
 
+    /*
+     * Multiply the two value
+     *
+     * @return int
+     */
     public function multiply()
     {
         if ($this->a === null || $this->b === null) {
@@ -69,6 +103,11 @@ class Index
         return $this->a * $this->b;
     }
 
+    /*
+     * Divide the two value
+     *
+     * @return int
+     */
     public function divide()
     {
         if ($this->a === null || $this->b === null) {
