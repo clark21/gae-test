@@ -43,7 +43,7 @@ class Index
 
         $this->a = $a;
         return $this;
-    } 
+    }
 
     /*
      * Set the value for $this->b
@@ -73,7 +73,7 @@ class Index
         }
 
         return $this->a + $this->b;
-    } 
+    }
 
     /*
      * Subtract the two value
