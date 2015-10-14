@@ -2,7 +2,7 @@
 <ruleset name="PHP_CodeSniffer">
     <description>The coding standard for PHP_CodeSniffer itself.</description>
 
-    <file>math.php</file>
+    <file>Math/Index.php</file>
 
     <arg name="report" value="full"/>
     <arg value="np"/>
