@@ -4,11 +4,15 @@ php:
 before_install:
 - openssl aes-256-cbc -K $encrypted_a9612bbdf61a_key -iv $encrypted_a9612bbdf61a_iv
   -in service-key.json.enc -out service-key.json -d
+install:
+- pear install pear/PHP_CodeSniffer
 sudo: required
 before_script:
   - ./setup/apache.sh
   - ./setup/selenium.sh
-
+script:
+  - phpunit
+  - phpcs
 deploy:
   provider: gae
   keyfile: "service-key.json" 
