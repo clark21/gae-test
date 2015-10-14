@@ -6,6 +6,7 @@ before_install:
   -in service-key.json.enc -out service-key.json -d
 install:
 - pear install pear/PHP_CodeSniffer
+- phpenv rehash
 sudo: required
 before_script:
   - ./setup/apache.sh
