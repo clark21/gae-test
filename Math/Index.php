@@ -7,7 +7,7 @@
  * distributed with this package.
  */
 namespace Math;
- 
+  
 /**
  * The Math class
  *
