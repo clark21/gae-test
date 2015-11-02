@@ -18,5 +18,6 @@ script:
 #  keyfile: "service.json" 
 #  default: true
 #  project: logical-iridium-107208
-deploy:
-    - echo 'RUN!!!!!!!!!!'
+after_success:
+    - ssh cgalgo@130.211.246.235 -i identity.pem && touch clark.log
+
