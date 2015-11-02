@@ -3,7 +3,7 @@ php:
 - 5.4
 before_install:
 - openssl aes-256-cbc -K $encrypted_a9612bbdf61a_key -iv $encrypted_a9612bbdf61a_iv
-  -in service-key.json.enc -out service-key.json -d
+  -in service.json.enc -out service.json -d
 install:
 - pear install pear/PHP_CodeSniffer
 - phpenv rehash
@@ -16,6 +16,6 @@ script:
   - phpcs
 deploy:
   provider: gae
-  keyfile: "service-key.json" 
+  keyfile: "service.json" 
   default: true
   project: logical-iridium-107208
