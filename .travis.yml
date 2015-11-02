@@ -18,5 +18,5 @@ script:
 #  keyfile: "service.json" 
 #  default: true
 #  project: logical-iridium-107208
-after_script:
+deploy:
     - echo 'RUN!!!!!!!!!!'
