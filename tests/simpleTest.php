@@ -72,7 +72,7 @@ class simpleTestTest extends PHPUnit_Extensions_Selenium2TestCase
     public function testTitle() 
     {
         $this->url('/main.php');
-        $this->assertEquals('Test', $this->byId('title')->text());
+        $this->assertEquals('Test 123', $this->byId('title')->text());
     }
 }
 ?>
