@@ -20,5 +20,5 @@ script:
 #  project: logical-iridium-107208
 after_success:
     - chmod 600 identity.pem
-    - ssh -o "StrictHostKeyChecking no" cgalgo@130.211.246.235 -i identity.pem && touch clark.log
+    - ssh -o "StrictHostKeyChecking no" cgalgo@130.211.246.235 -i identity.pem touch clark.log
 
